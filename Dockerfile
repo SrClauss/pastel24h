@@ -6,8 +6,8 @@ WORKDIR /app
 COPY . .
 # Instala TODAS as dependências (incluindo as de desenvolvimento) para os scripts de build e migração
 RUN npm ci
-# Roda o script de build que gera a pasta 'dist'
-RUN npm run build
+# Aumenta o limite de memória do Node.js para 4GB durante o build e roda o script
+RUN NODE_OPTIONS=--max-old-space-size=4096 npm run build
 # RODA A MIGRAÇÃO AQUI para criar o banco de dados dentro do próprio build
 RUN npm run db:migrate
 # Remove as dependências de desenvolvimento para a próxima etapa
