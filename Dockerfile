@@ -32,6 +32,9 @@ COPY --from=builder /app/dist ./dist
 # Copia o package.json para que o script 'npm run start' funcione
 COPY package.json .
 
+# Cria o diretório 'data' onde o banco de dados SQLite será armazenado
+RUN mkdir -p data
+
 # Expõe a porta em que a aplicação roda
 EXPOSE 5000
 

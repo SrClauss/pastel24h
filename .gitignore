@@ -1,24 +1,22 @@
-# — dependências —
-node_modules/
+# Dependências
+node_modules
 
-# — builds / saídas —
-dist/
-.next/
-.out/
+# Saída de Build
+dist
 
-# — artefatos temporários —
+# Logs
 *.log
-*.tar.gz
+npm-debug.log*
+yarn-debug.log*
 
-# — arquivos de configuração específicos do Replit —
-.replit
-replit.nix
-replit.*
+# Banco de dados local
+/data/
 
-# — variáveis de ambiente —
+# Variáveis de Ambiente
 .env
 .env.*
-!.env.example      # (mantenha se usar um modelo sem dados sensíveis)
+!.env.example
 
-# — arquivos do sistema —
+# Arquivos de Sistema/Editor
 .DS_Store
+.vscode/
