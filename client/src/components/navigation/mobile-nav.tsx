@@ -35,7 +35,7 @@ export default function MobileNav({ currentPath }: MobileNavProps) {
   ];
 
   return (
-    <nav className="xl:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-50" 
+    <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-50" 
          style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}>
       <div className="grid grid-cols-5 gap-1 py-2 px-2 w-full max-w-none">
         {navItems.map((item) => {
